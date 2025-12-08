@@ -64,4 +64,45 @@ console.log("nombre fraction",nombreFraction);
         console.log(client.scores);//récupère [4, 7, 2]
         console.log(client.scores[1]);//récupère 7
 
+        let JoueurProfessinnel= {
+            nom: "Zinadine",
+            prenom: "Yazid Zidane",
+            nationalité1: "Francais",
+            nationalité2: "Algériennne",
+            dateNaissance: "23/06/1972",
+            taille: 1.85,
+            piedfort: "droit",
+            poste: "Milieu offenser"
+    }
+// J'affiche l'ensemble de l'objet joueurProfessionnel
+console.log(JoueurProfessinnel);
+console.log("C'est un grand joueur son nom est ",JoueurProfessinnel.nom);
+console.log("son prenom ",JoueurProfessinnel.prenom);
+console.log("d'origine ",JoueurProfessinnel.nationalité1);
+console.log("est d'origine ",JoueurProfessinnel.nationalité2);
+console.log("il est née le ",JoueurProfessinnel.dateNaissance);
+console.log("il fait la taille de ",JoueurProfessinnel.taille);
+console.log("il utilise son pied ",JoueurProfessinnel.piedfort);
+console.log ("son poste est ",JoueurProfessinnel.poste);
+
+
+        let Presidentduconseilgeneraldemayotte= {
+            nom: "Younoussa",
+            prenom: "Bamana",
+            nationalité: "Francais",
+            dateNaissance: "23/06/1972",
+            lieudeNaissance: "Kani-Keli Mayotte",
+            datedeDeces: "22/06/2007",
+            profession: "Instituteur",
+    }
+
+console.log(JoueurProfessinnel);
+console.log("C'est un grand preident du conseil general son nom est ",Presidentduconseilgeneraldemayotte.nom);
+console.log("son prenom ",Presidentduconseilgeneraldemayotte.prenom);
+console.log("de nationalité",Presidentduconseilgeneraldemayotte.nationalité);
+console.log("il est née le ",Presidentduconseilgeneraldemayotte.dateNaissance);
+console.log("à ",Presidentduconseilgeneraldemayotte.lieudeNaissance);
+console.log("il est mort le ",JoueurProfessinnel.datedeDeces);
+console.log("il travail en temps que ",JoueurProfessinnel.profession);
+
 
