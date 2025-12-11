@@ -1,0 +1,17 @@
+form{
+  background:rgb(228, 196, 100);/*background:sert à changer le fond de mon paragraphe */
+  text-align:center;
+  
+}
+
+div{
+    display: inline;
+    
+}
+
+input[type=text], input[type=number], input[type=Age]{
+    padding: 10px; /*Ajouter un espace à l'intérieur de la <input>*/
+    margin: 50px;/*la valeur margin permet d'agrandir la marge du fichier*/
+    border: solid; 
+    border-radius: 8px 8px 8px 8px ;
+}
