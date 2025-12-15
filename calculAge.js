@@ -1,13 +1,13 @@
-function calculAge() {
-    const anneeNaissnce = document.getElementById("anneeNaissance").Value;
-    const ageAffichage = document.getElementById("ageResultat");
+const inputAnneeNaissance = document.getElementById("anneeNaissance");
+const inputAge = document.getElementById("age");
 
-    if (anneNaissance && !isNaN(anneeNaissnce)) {
-        const anneCourante = new Date().getUTCFullYear();
-        const age = anneCourante - parseInt(anneeNaissnce);
-        ageAffichage.textContent = age + "ans";
+inputAnneeNaissance.addEventListener("input", () => {
+    const anneeNaissance = Number(inputAnneeNaissance.value);
+    const anneeActuelle = new Date().getFullYear();
+
+    if (anneeNaissance && anneeNaissance > 1900 && anneeNaissance <= anneeActuelle) {
+        inputAge.value = anneeActuelle - anneeNaissance;
     } else {
-        ageAffichage.textContent = "";
+        inputAge.value = "";
     }
-    
-}
+});

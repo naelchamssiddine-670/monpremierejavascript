@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title>Jeu de calcul </title>
-        <link href="calculAge.css"rel="stylesheet">
-        <link rel="stylesheet" href="calculAge.js ">
-    </head>
-    <body>
-        <p>Formulaire:</p>
+<head>
+    <meta charset="utf-8">
+    <title>Jeu de calcul</title>
+    <link rel="stylesheet" href="calculAge.css">
+    <script src="dom.js" defer></script>
+</head>
 
+<body>
 
+<p>Formulaire</p>
 
-    </body>
-         <form>
-            <div>
-                    <label for="prénom"> Prénom(s):<label>
-                    <!--Je précise le prénom-->
-                    <input type="text" name="prénom" id="prénom">
+<form>
 
-                    <label for="nom"> Nom:</label>
-                    <!--Je précise le nom-->
-                    <input type="text" name="nom" id="nom">
-            </div>
+    <div>
+        <label for="prenom">Prénom(s):</label>
+        <input type="text" name="prenom" id="prenom">
 
-            <br><br>
-            <p>situation:</p>
-            <div2>
-                    <label for="année de naissance"> Année de naissance:<label>
-                    <!--Je précisse l'année de naissance-->
-                    <input type="number" name="AnnéedeNaissance" id="annéedeNaissance" placeholder="aaaa">
-                    <!--input: c'est un point-->
-                    <label for="age"> Age:</label>
-                    <!--précise l'age-->
-                    <input type="age" name="Age" id="Age">
-            </div2> 
+        <label for="nom">Nom:</label>
+        <input type="text" name="nom" id="nom">
+    </div>
 
-            <br><br>
+    <br><br>
 
-            
-            <input type="radio" id="situationEtudiant" name="situationEtudiant">
-            <label for="situation">étudiant</label>
-            <br>
-                <!--Je précise la situation-->
-            <input type="radio" id="situationSalarie" name="situationSalarie">
-            <label for="situation">salarié</label><br>
-                <!--Je précise la situation-->
-            <br><br>
-               
+    <p>Situation :</p>
 
-         </form>
+    <div>
+        <label for="anneeNaissance">Année de naissance:</label>
+        <input type="number" id="anneeNaissance" placeholder="aaaa">
 
-</html>  
+        <label for="age">Âge:</label>
+        <input type="number" id="age" readonly>
+    </div>
+
+    <br><br>
+
+    <input type="radio" id="etudiant" name="situation">
+    <label for="etudiant">Étudiant</label><br>
+
+    <input type="radio" id="salarie" name="situation">
+    <label for="salarie">Salarié</label>
+
+    <br><br>
+
+    <input type="button" value="Valider" id="boutonValider">
+    <br><br>
+
+</form>
+
+<script src="calculAge.js"></script>
+</body>
+</html>
