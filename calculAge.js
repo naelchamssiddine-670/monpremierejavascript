@@ -11,3 +11,22 @@ inputAnneeNaissance.addEventListener("input", () => {
         inputAge.value = "";
     }
 });
+
+// je récupère la liste des communes de Mayotte.
+// puis je stocke les communes dans la variable elementListCommmunes
+let elementListCommunes = document.querySelector("#listCommunes");
+
+// Ensuite, j'affiche la variable elementListCommunes
+console.log(elementListCommunes.innerText);
+
+for(let i = 0; i < elementListCommunes.children.length; i++){
+    console.log("commune n°",i,";",elementListCommunes.children[i].textContent);
+}
+
+
+// J'utilise QuerSelectorAll pour récupèrer tous les membres de le meme classe
+let elementClassCommune = document.querySelectorAll(".commmune");
+for (let i = 0; i < elementClassCommune.length; i++){
+    console.log(elementClassCommune[i]);
+    console.log(elementClassCommune[i].innerText);
+}
