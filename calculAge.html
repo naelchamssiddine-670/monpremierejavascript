@@ -5,10 +5,23 @@
     <title>Jeu de calcul</title>
     <link rel="stylesheet" href="calculAge.css">
     <script src="dom.js" defer></script>
+    <script src="evenements.js" defer></script>
 </head>
 
 <body>
 <article>
+    <!-- J'affiche la date du jour et l'heure-->
+    <div id="date" class="date">
+        <button id="validerDate">Date du jour</button>
+        <span id="dateDuJour"></span>
+        <br>
+        <span id="dateDuJourFormat2">
+            <p id="dateDuJourFormat2">
+                date format local
+            </p>
+
+        </span>
+    </div>
     <!-- Je liste les communes de Mayotte -->
     <h3 id="commune">Communes de Mayotte</h3>
     <ol id="listCommunes">
