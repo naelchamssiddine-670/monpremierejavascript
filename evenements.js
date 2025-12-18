@@ -47,10 +47,40 @@ let elementinputNomForm = document.querySelector("#nom");
 
 
 let messageSalutation; // Je déclare une variable vide.
+
 let elementSpanNomUtilisateur = document.querySelector("#nomUtilisateur");
 
 elementinputNomForm.addEventListener("change", (event) => {
     console.log(event.target.value);
     messageSalutation = `Bonjour ${event.target.value}`;
     elementSpanNomUtilisateur.textContent = messageSalutation;
+});
+
+/**
+ * Envoyer le formulaire 
+ * Je récupèrer les données saisies sur le formulaire:
+ * - nom
+ * - prénom
+ * - situation
+ * - année de naissance
+ */
+
+// Je récupère la balise <form> </form> avec ses enfants; Ensuite, je stacke la balise dans elementForm.
+let elementForm = document.querySelector('form');
+console.log("elementForm : ", elementForm);
+
+// j'associe l'événement `submit`
+elementForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log("#### Je suis 'évenement submit du formulaire");
+
+    const nom = document.querySelector("#nom").value;
+    console.log("NOM saisi :" , nom);
+
+    const prenom = document.querySelector("#prenom").value;
+    console.log("prénom :",prenom);
+
+    const age = document.querySelector("#age").value;
+    console.log("Âge :",age);
+
 });
