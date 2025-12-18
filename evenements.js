@@ -70,17 +70,33 @@ let elementForm = document.querySelector('form');
 console.log("elementForm : ", elementForm);
 
 // j'associe l'événement `submit`
+
 elementForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log("#### Je suis 'évenement submit du formulaire");
+    console.log("#### Je suis évenement submit du formulaire");
 
     const nom = document.querySelector("#nom").value;
-    console.log("NOM saisi :" , nom);
-
     const prenom = document.querySelector("#prenom").value;
-    console.log("prénom :",prenom);
-
+    console.log("NOM :" , nom);
+    console.log("prenom : ", prenom);
     const age = document.querySelector("#age").value;
-    console.log("Âge :",age);
+    console.log("age  :" ,age, "ans");
 
 });
+
+let radioEtudiant = document.getElementById("etudiant");
+let radioSalarie = document.getElementById("salarie");
+let divSituationAffichee = document.getElementById("situationAffichee");
+let situationTexte = document.getElementById("situationTexte");
+
+function afficherSituation() {
+    if (radioEtudiant.checked) {
+        situationTexte.textContent = "Votre situation : Etudiant";
+    } else if (radioSalarie.checked) {
+        situationTexte.textContent = "Votre situation : Salarie";
+    } else {
+        situationTexte.textContent = "Votre situation : Non définie";
+    }
+
+
+}

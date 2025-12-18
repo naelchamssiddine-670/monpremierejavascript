@@ -1,12 +1,14 @@
+
 let elementBoutonValider = document.getElementById("boutonValider");
 
 elementBoutonValider.addEventListener("click",function() {
     console.log("elementBoutonValider :",
     elementBoutonValider);
 });
+
 console.log(document.getElementById("nom"));
 
-console.log(elementBoutonValider);
+//console.log(elementBoutonValider);
 
 let elementinputNom = document.querySelector("#nom");
 

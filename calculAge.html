@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="calculAge.css">
     <script src="dom.js" defer></script>
     <script src="evenements.js" defer></script>
+    <script src="calculAge.js"defer></script>
 </head>
 
 <body>
@@ -66,6 +67,12 @@
 
     <br><br>
 
+    <div id="situationAffichee">
+        <p id="situationText">
+            Votre situation : Non définie
+        </p>
+    </div>
+
     <p>Situation :</p>
 
     <div>
@@ -83,20 +90,20 @@
 
     <br><br>
 
-    <input type="radio" id="etudiant" name="situation">
+    <input type="radio" id="etudiant" name="situation" value="etudiant">
     <label for="etudiant">Étudiant</label><br>
 
-    <input type="radio" id="salarie" name="situation">
+    <input type="radio" id="salarie" name="situation" value="salarie">
     <label for="salarie">Salarié</label>
 
     <br><br>
 
-    <input type="button" value="Valider" id="boutonValider">
+    <button value="Valider" id="boutonValider">valider</button>
     <br><br>
 
     </form>
 </article>
-<script src="calculAge.js"></script>
+
 
 
  <section>
