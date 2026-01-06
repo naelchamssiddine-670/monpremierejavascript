@@ -73,30 +73,33 @@ console.log("elementForm : ", elementForm);
 
 elementForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log("#### Je suis évenement submit du formulaire");
+    console.log("#### Je suis événement submit du formulaire");
 
     const nom = document.querySelector("#nom").value;
     const prenom = document.querySelector("#prenom").value;
-    console.log("NOM :" , nom);
-    console.log("prenom : ", prenom);
     const age = document.querySelector("#age").value;
-    console.log("age  :" ,age, "ans");
 
+    console.log("NOM :", nom);
+    console.log("PRENOM :", prenom);
+    console.log("AGE :", age, "ans");
+
+    // Affiche la situation en même temps
+    afficherSituation();
 });
 
 let radioEtudiant = document.getElementById("etudiant");
 let radioSalarie = document.getElementById("salarie");
-let divSituationAffichee = document.getElementById("situationAffichee");
 let situationTexte = document.getElementById("situationTexte");
 
-function afficherSituation() {
-    if (radioEtudiant.checked) {
-        situationTexte.textContent = "Votre situation : Etudiant";
-    } else if (radioSalarie.checked) {
-        situationTexte.textContent = "Votre situation : Salarie";
-    } else {
-        situationTexte.textContent = "Votre situation : Non définie";
-    }
+// variable pour le message / majeur
+let statut;
 
-
+if (age < 18) {
+    statut = "Vous êtes mineur.";
+}else {
+    statut = "Vous êtes majeur.";
 }
+
+// Afficher l'âge + le statut
+divResultat.textContent =
+    "Tu as " + age + "ans en " + anneeActuelle + ". " + statut;
