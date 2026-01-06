@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date HTML</title>
+    <link rel="stylesheet" href="date.css">
+</head>
+<body>
+<h2>Choisir un pays :</h2>
+<select id="pays">
+  <option value="local">Maoré</option>
+  <option value="Europe/Paris">Farantsa</option>
+  <option value="Europe/London">Royaume-Uni</option>
+  <option value="America/New_York">New York</option>
+  <option value="Asia/Tokyo">Tokyo</option>
+  <option value="Australia/Sydney">Sydney</option>
+</select>
+
+<div id="horloge">
+  <span id="heure"></span> :
+  <span id="minute"></span> :
+  <span id="seconde"></span>
+</div>
+
+<div id="date">
+  <span id="jour"></span> /
+  <span id="mois"></span> /
+  <span id="annee"></span>
+</div>
+
+</body>
+
+<script src="manipulationDate.js"></script>
+</html>

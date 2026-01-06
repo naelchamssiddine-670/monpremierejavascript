@@ -103,3 +103,4 @@ if (age < 18) {
 // Afficher l'âge + le statut
 divResultat.textContent =
     "Tu as " + age + "ans en " + anneeActuelle + ". " + statut;
+    
