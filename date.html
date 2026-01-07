@@ -7,27 +7,17 @@
     <link rel="stylesheet" href="date.css">
 </head>
 <body>
-<h2>Choisir un pays :</h2>
-<select id="pays">
-  <option value="local">Maoré</option>
-  <option value="Europe/Paris">Farantsa</option>
-  <option value="Europe/London">Royaume-Uni</option>
-  <option value="America/New_York">New York</option>
-  <option value="Asia/Tokyo">Tokyo</option>
-  <option value="Australia/Sydney">Sydney</option>
-</select>
+<h2>Horloge mondial :</h2>
+<!-- Menu déroulant pour choisir le fuseau horaire -->
+    <select id="timezone">
+        <option value="local">Maoré</option>
+        <option value="Europe/Paris">Farantsa</option>
+        <option value="America/New_York">New York</option>
+        <option value="Asia/Tokyo">Tokyo</option>
+    </select>
 
-<div id="horloge">
-  <span id="heure"></span> :
-  <span id="minute"></span> :
-  <span id="seconde"></span>
-</div>
-
-<div id="date">
-  <span id="jour"></span> /
-  <span id="mois"></span> /
-  <span id="annee"></span>
-</div>
+    <!-- Div où sera affichée la date et l'heure -->
+    <div id="datetime"></div>
 
 </body>
 

@@ -1,43 +1,43 @@
-function mettreAJourHorloge() {
-  const pays = document.querySelector("#pays").value;
-  let maintenant;
+// Récupération des éléments HTML
+const select = document.getElementById("timezone");
+const dateTimeDiv = document.getElementById("datetime");
 
-  if (pays === "local") {
-    // Heure de l'ordinateur
-    maintenant = new Date();
-  } else {
-    // Heure selon le fuseau horaire choisi
-    maintenant = new Date(
-      new Date().toLocaleString("en-US", { timeZone: pays })
-    );
-  }
+// Fonction qui affiche la date et l'heure selon le fuseau choisi
+function afficherDateHeure() {
+    // Récupère la valeur du fuseau sélectionné
+    const zone = select.value;
 
-  // Heure
-  const heure = String(maintenant.getHours()).padStart(2, "0");
-  const minute = String(maintenant.getMinutes()).padStart(2, "0");
-  const seconde = String(maintenant.getSeconds()).padStart(2, "0");
+    // Options pour le formatage de la date et de l'heure
+    let options = {
+        weekday: "long",   // jour de la semaine (lundi, mardi, ...)
+        year: "numeric",   // année sur 4 chiffres
+        month: "long",     // mois en lettres
+        day: "numeric",    // jour du mois
+        hour: "2-digit",   // heure sur 2 chiffres
+        minute: "2-digit", // minutes sur 2 chiffres
+        second: "2-digit"  // secondes sur 2 chiffres
+    };
 
-  // Date
-  const jour = String(maintenant.getDate()).padStart(2, "0");
-  const mois = String(maintenant.getMonth() + 1).padStart(2, "0");
-  const annee = maintenant.getFullYear();
+    // Si ce n'est pas l'heure locale, on ajoute le fuseau horaire
+    if (zone !== "local") {
+        options.timeZone = zone;
+    }
 
-  // Affichage
-  document.querySelector("#heure").textContent = heure;
-  document.querySelector("#minute").textContent = minute;
-  document.querySelector("#seconde").textContent = seconde;
+    // On formate la date selon les options définies
+    const dateHeure = new Intl.DateTimeFormat("fr-FR", options).format(new Date());
 
-  document.querySelector("#jour").textContent = jour;
-  document.querySelector("#mois").textContent = mois;
-  document.querySelector("#annee").textContent = annee;
+    // On affiche le résultat dans le div
+    dateTimeDiv.textContent = dateHeure;
 }
 
-// Mise à jour toutes les secondes
-setInterval(mettreAJourHorloge, 1000);
-mettreAJourHorloge();
+// Met à jour la date et l'heure chaque seconde
+setInterval(afficherDateHeure, 1000);
 
-// Met à jour instantanément si l'utilisateur change de pays
-document.querySelector("#pays").addEventListener("change", mettreAJourHorloge);
+// Met à jour la date et l'heure quand on change de fuseau dans le menu
+select.addEventListener("change", afficherDateHeure);
+
+// Affichage initial au chargement de la page
+afficherDateHeure();
 
 
 

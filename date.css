@@ -1,62 +1,26 @@
-
 /* Style général de la page */
 body {
-  font-family: Arial, Helvetica, sans-serif; /* Police simple et lisible */
-  background: black; /* Couleur de fond (bleu foncé) */
-  color: blueviolet; /* Couleur du texte (gris clair) */
-
-  /* Centrage du contenu */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  height: 100vh; /* Hauteur de l'écran */
-  margin: 0; /* Supprime les marges par défaut */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0; /* léger fond gris pour mieux voir les cadres */
 }
 
-/* Style du menu déroulant (choix du pays) */
+/* Style du menu déroulant */
 select {
-  padding: 10px 15px; /* Espaces internes */
-  font-size: 16px; /* Taille du texte */
-  border-radius: 8px; /* Bords arrondis */
-  border: none; /* Supprime la bordure */
-  margin-bottom: 30px; /* Espace sous le select */
-  cursor: pointer; /* Curseur en forme de main */
+    padding: 6px;
+    font-size: 16px;
+    margin-bottom: 20px; /* espace en dessous */
 }
 
-/* Conteneur de l'horloge (heure) */
-#horloge {
-  font-size: 60px; /* Taille de l'heure */
-  font-weight: bold; /* Texte en gras */
-  letter-spacing: 3px; /* Espacement entre les chiffres */
-  margin-bottom: 10px; /* Espace avec la date */
-}
-
-
-/* Conteneur de la date */
-#date {
-  font-size: 22px; /* Taille du texte de la date */
-  opacity: 0.8; /* Légère transparence */
-}
-
-/* Chaque span de l'horloge (heures, minutes, secondes) */
-#horloge span {
-  min-width: 70px; /* Largeur minimum pour éviter que ça bouge */
-  display: inline-block; /* Permet le min-width */
-  text-align: center; /* Centre le texte */
-}
-
-/* Adaptation pour les petits écrans (mobile) */
-@media (max-width: 600px) {
-
-  /* Réduit la taille de l'horloge */
-  #horloge {
-    font-size: 40px;
-  }
-
-  /* Réduit la taille de la date */
-  #date {
-    font-size: 18px;
-  }
+/* Style du bloc affichant la date et l'heure */
+#datetime {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px 25px; /* espace intérieur du cadre */
+    border: 3px solid #4CAF50; /* couleur verte pour le cadre */
+    border-radius: 10px; /* coins arrondis */
+    background-color: #ffffff; /* fond blanc à l'intérieur du cadre */
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2); /* légère ombre pour relief */
+    display: inline-block; /* cadre de la taille du contenu */
 }
